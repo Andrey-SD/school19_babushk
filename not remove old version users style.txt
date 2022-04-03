@@ -1,0 +1,551 @@
+<!--=============================  J  S  =============================-->
+<!---------------RING HOVER--------------->
+
+<!---------------MENU FIXED--------------->
+<script>
+	window.onscroll =
+		function (m) {
+			var scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+				scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+				m = document.getElementById("menu_bg");
+			if (scrollTop > 280) {
+				m.style.position = "fixed";
+				m.style.zIndex = "999";
+				m.style.top = "0";
+				m.style.width = "1200px";
+			} else {
+				m.style.position = "static";
+			}
+			if (scrollLeft > 0) m.style.left = -scrollLeft + "px";
+			else m.style.left = "";
+		}
+</script>
+
+
+
+<!---------------BROWSER VERSION--------------->
+<style>
+	#over_head_vers {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		z-index: 1000;
+		display: none;
+	}
+
+	#ver {
+		position: relative;
+		background-image: rgba(255, 255, 255, 0.9);
+		background-image: url('/uploads/editor/1548/759807/top_image_bg/top_image_bg.jpg');
+		text-align: center;
+		padding: 10px 0px;
+		padding-right: 65px;
+		margin: 0px;
+		color: black;
+	}
+
+	#ver p,
+	#ver a {
+		font-size: 14px;
+	}
+
+	#ver_x {
+		position: absolute;
+		text-align: center;
+		margin: 0px;
+		right: 17px;
+		top: 12px;
+		font-family: Arial;
+		font-size: 15pt;
+		width: 30px;
+		height: 30px;
+		transition: 0.5s;
+		color: black;
+		line-height: 30px;
+	}
+
+	#ver_x:hover {
+		transform: rotate(360deg);
+		cursor: pointer
+	}
+
+	#ver_x_close {
+		position: absolute;
+		top: 35px;
+		right: 9px;
+		font-size: 10px;
+		cursor: pointer;
+	}
+
+	div#top_conteiner>div[style^="height"] {
+		display: none;
+	}
+
+	/* //.left_menu_item {top:-15px;}
+	//.left_menu_item_sub {position:relative; top:-15px;} */
+	.ddsmoothmenu ul li a[href="http://school19_babushk.klasna.com/uk/site/2019-rik.html"] {
+		color: gold;
+	}
+
+	/* a[href="http://school19_babushk.klasna.com/uk/site/batkam-maibutnikh-pershok.html"] {
+		font
+	} */
+
+	.ddsmoothmenu ul {
+		display: inline-block;
+	}
+
+	.ddsmoothmenu ul li {
+		background: none;
+		/*overflow: hidden;*/
+	}
+
+	div#right_part>center {
+		display: none;
+	}
+
+
+	/*-------------OTHER ELEMENT-------------*/
+	.p {
+		font-size: 12pt;
+		padding-top: 5px;
+		padding-bottom: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
+		text-align: justify;
+	}
+
+	.bold {
+		font-weight: bold;
+	}
+
+	.pp {
+		font-size: 14pt;
+		padding-top: 15px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+		text-align: justify;
+	}
+
+	/*-----------------------BLOCKQUOTE------------------------*/
+	.blockquote {
+		background: #f7f7f7;
+		border-left: 1px solid #bbb;
+		font-style: italic;
+		margin: 1.5em 10px;
+		padding: 0.5em 10px;
+	}
+
+	.blockquote:before {
+		color: #bbb;
+		content: "\201C";
+		/* Непечатаемый символ слева */
+		font-size: 3em;
+		line-height: 0.1em;
+		margin-right: 0.2em;
+		vertical-align: -.4em;
+	}
+
+	.blockquote:after {
+		color: #bbb;
+		content: "\201C";
+		/* Непечатаемый символ справа */
+		font-size: 3em;
+		line-height: 0.1em;
+		vertical-align: -.45em;
+	}
+
+	.blockquote>p:first-child {
+		display: inline;
+	}
+
+	.img {
+		text-align: center;
+	}
+
+	.hr {
+		text-align: center;
+		width: 75%;
+		color: rgba(125, 125, 125, 0.5);
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	body {
+		background-image: linear-gradient(90deg, #fee67d, #FFF, #fee67d);
+		background-image: url(http://i74.fastpic.ru/big/2016/0304/0d/3345a5aeed128c4ffe064f017272940d.jpg);
+		/*background-image: url(http://i93.fastpic.ru/big/2017/0529/32/8893c0be95aa97e127381c1c23b76532.jpg);*/
+		/*background-image: url(http://i84.fastpic.ru/big/2019/0123/c3/_1046c456c1b4cc437df6b50af93dbac3.jpg?noht=1);*/
+		/*background-image: url(https://i.ytimg.com/vi/cgfjpPpSBm4/maxresdefault.jpg);*/
+		/*background-image: url(http://i.piccy.info/i9/aa22529bb31b1042a6ba953b350cd07b/1566334115/211515/1333849/142309_fioletowe_astry_pakijpg_original_111.jpg);*/
+		/*background-image: url(https://i106.fastpic.ru/big/2019/1014/10/_b5b51ff0e4d151eb7a3f9ddc99b94210.jpg?noht=1);*/
+		background-attachment: fixed;
+		background-position: top;
+		background-size: cover;
+	}
+
+	#footer {
+		display: none;
+		background-image: url('');
+		background-color: rgba(255, 255, 255, 0);
+	}
+
+	#login_str:before {
+		content: "Увійти / Реєстрація";
+		background-image: linear-gradient(#98c50e, #6da600);
+		color: #FFF;
+		font-weight: bold;
+		border-radius: 3px;
+		padding: 5px;
+	}
+
+	#login_str:hover:before {
+		background-image: linear-gradient(#6da600, #98c50e);
+	}
+
+	#login_str {
+		height: 10px;
+		margin-top: 15px;
+		display: none;
+	}
+
+	#login_str:hover {
+		height: 75px;
+	}
+
+	#top_conteiner,
+	#main_content {
+		background-color: rgba(255, 255, 255, 0.75);
+	}
+
+	#top_conteiner {
+		box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, 0.75);
+	}
+
+	#main_content {
+		border-radius: 5px;
+		padding: 5px;
+	}
+
+	@keyframes slidein {
+		0% {
+			background-position-x: 0px;
+		}
+
+		100% {
+			background-position-x: -2000px;
+		}
+	}
+
+	#top_image.uk {
+		background: url(http://i75.fastpic.ru/big/2015/1109/fb/878481bb4a7c9cad9cca73f8824f78fb.jpg) no-repeat center center;
+		/*background: url(http://i74.fastpic.ru/big/2016/0304/09/c26d19f6e8696435d06a90cc8444ed09.jpg) repeat-x top center;*/
+		background-size: 100% 100%;
+		transition-duration: 0.5s;
+		/*background-position-x: -1000px;*/
+		z-index: 99;
+		box-shadow: inset 0px 0px 10px 5px rgba(255, 255, 255, 0.75);
+		/*animation-duration: 8s;*/
+		/*animation-name: slidein;*/
+		/*animation-iteration-count: infinite;*/
+		/*animation-direction: alternate;*/
+	}
+
+	.top_menu_item,
+	.left_menu_item_link,
+	.scalehover,
+	#login_str {
+		transition-duration: 0.5s;
+	}
+
+	#top_image.uk:hover {
+		/*-moz-transform: rotate(1deg) scale(1.1, 1.1);
+		 -ms-transform: rotate(1deg) scale(1.1, 1.1); 
+		 -webkit-transform: rotate(1deg) scale(1.1, 1.1);
+		 -o-transform: rotate(1deg) scale(1.1, 1.1);
+		 transform: rotate(1deg) scale(1.1, 1.1);*/
+		background-size: 110% 110%;
+	}
+
+	.top_menu_item:hover,
+	.left_menu_item_link:hover {
+		-moz-transform:
+			/*rotate(1deg)*/
+			scale(1.05, 1.05);
+		/* Для Firefox */
+		-ms-transform:
+			/*rotate(1deg)*/
+			scale(1.05, 1.05);
+		/* Для IE */
+		-webkit-transform:
+			/*rotate(1deg)*/
+			scale(1.05, 1.05);
+		/* Для Safari, Chrome, iOS */
+		-o-transform:
+			/*rotate(1deg)*/
+			scale(1.05, 1.05);
+		/* Для Opera */
+		transform:
+			/*rotate(1deg)*/
+			scale(1.05, 1.05);
+	}
+
+	.scalehover:hover {
+		-moz-transform: scale(1.05, 1.05);
+		/* Для Firefox */
+		-ms-transform: scale(1.05, 1.05);
+		/* Для IE */
+		-webkit-transform: scale(1.05, 1.05);
+		/* Для Safari, Chrome, iOS */
+		-o-transform: scale(1.05, 1.05);
+		/* Для Opera */
+		transform: scale(1.05, 1.05);
+	}
+
+	#top_image h1.title {
+		top: 240px;
+		color: #70a801;
+		text-shadow: 1px 1px 2px black;
+		text-align: center;
+		left: 10px;
+		line-height: 30px;
+		width: 980px;
+	}
+
+	#logo {
+		border-radius: 3px;
+		background: url('http://school19_babushk.klasna.com/themes/1/img/langv_podl.png') no-repeat top center;
+		background-size: cover;
+	}
+
+	#top_image h1.title {
+		border-radius: 3px;
+		background: rgba(255, 255, 255, 0.5);
+	}
+
+	#logo img {
+		padding: 5px;
+	}
+
+	/*---------------SPECIAL PAGE ------------------*/
+	.nnn {
+		border: 2px solid orange;
+		border-radius: 5px;
+		background: url('http://i66.fastpic.ru/big/2015/0902/6f/9aef16653943fe295ce7363ce39e746f.png') no-repeat 10px 10px;
+		background-size: 50px;
+		padding: 15px;
+		padding-left: 80px;
+		min-height: 75px;
+		margin: 10px 15px;
+	}
+
+	.title {
+		color: orange;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	#top_image h1.title {
+		width: 1180px !important;
+	}
+</style>
+<div id="over_head_vers">
+	<div id="ver">
+		<p>Якщо зміст сайту виглядає дивно, деякі елементи відображаються у вигляді чорних прямокутників або одні
+			елементи налазять на інші - будь ласка оновіть свій WEB-переглядач.
+			<br>Актуальність версії свого браузеру Ви завжди можете перевірити на сайті <a style="text-decoration:none"
+				href="https://2ip.ru/browser-update/" target="_blank">2ip.ru</a></p>
+		<div id="ver_x" onclick="hidden_element_create('over_head_vers','_vervisible','false',180)"
+			title="Закрити це повідомлення">✕</div>
+		<div id="ver_x_close" onclick="hidden_element_create('over_head_vers','_vervisible','false',180)"
+			title="Закрити це повідомлення">(Закрити)</div>
+	</div>
+</div>
+<script>
+	function hidden_element_create(elem, cname, cvalue, exdays) {
+		document.getElementById(elem).style.display = "none";
+		setCookie(cname, cvalue, exdays) /*document.cookie = "_vervisible=false; expires=Mon, 02-Jan-2017 00:00:00 GMT"*/ ;
+	}
+
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') c = c.substring(1);
+			if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+		}
+		return "";
+	}
+
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = "expires=" + d.toUTCString();
+		document.cookie = cname + "=" + cvalue + "; " + expires;
+	}
+
+	function hidden_element_check(elem, cname) {
+		var visible = getCookie(cname);
+		if (visible != "false") document.getElementById(elem).style.display = "block";
+		else document.getElementById(elem).style.display = "none";
+	}
+	hidden_element_check("over_head_vers", "_vervisible");
+</script>
+<!--============================  C  S  S  ============================-->
+<style>
+
+</style>
+<!--<LINK REL=stylesheet HREF="https://drive.google.com/uc?export=download&confirm=no_antivirus&id=0B7E6P-t5OAv-Q2Izam9sbWtVSmM">-->
+
+<!--===========================  H  T  M  L  ===========================-->
+<!------------------------1933------------------------>
+<!--<div style="position:fixed; bottom:0px; left:0px; width:300px; height:300px; display:none; 
+	background: url(http://i75.fastpic.ru/big/2015/1128/9c/d7e69cb65fca2252ca60e88d989ed79c.gif), url(http://i74.fastpic.ru/big/2015/1128/20/eb1d2971b36fb2cb533e593c82dad020.png); z-index:1000;">
+	</div>-->
+
+<!------------------------Audio(hover)------------------------>
+<audio preload="auto" id="hoveraudio" <!--autoplay="autoplay" -->>
+	<source src="https://drive.google.com/uc?export=download&confirm=no_antivirus&id=0B7E6P-t5OAv-aWJJX1F2cmQtdXM"
+		type="audio/ogg; codecs=vorbis">
+	<source src="https://drive.google.com/uc?export=download&confirm=no_antivirus&id=0B7E6P-t5OAv-QTJqN196c2NkRWc"
+		type="audio/mpeg">
+</audio>
+
+<!------------------------Бегущая строка------------------------>
+<!--<marquee class="impotant_news" behavior="scroll" scrolldelay="150" direction="left">
+			<a href="https://school19_babushk.klasna.com/uk/news-1052-1548">
+	
+	З 25.05.2020р. в КЗО «СЗШ № 19» ДМР продовжується 
+	попередня реєстрація дітей до 2-10 класу НУШ 
+	на 2020-2021 навчальний рік. Реєстрація здійснюється виключно для:
+	1.	дітей, яким на 01.09.2020р. виповниться 7 років і місце проживання яких на території обслуговування закладу освіти підтверджене відповідними документами                                              
+	2.	дітей, які є рідними братами та/або сестрами, учнів, що здобувають освіту у цьому закладі;
+	3.	випускників закладу дошкільної освіти.
+	
+	
+	
+	</a>		</marquee>
+	-->
+<!------------------------ссылки на ресурсы------------------------>
+<hr class="hr">
+<a href="http://www.mon.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/mongovua.png" style=" " width="200" /></a>
+<hr class="hr">
+<a href="http://www.adm.dp.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/dadm.png" style=" " width="200" /></a>
+
+<!--<hr class = "hr">
+	<a href="http://www.doippo.dp.ua" target="_blank"><img class = "scalehover" alt="Банер" height="92" src="/uploads/editor/1558/91827/sitepage_148/images/doippo.jpg" style=" " width="200" /></a>-->
+
+<hr class="hr">
+<a href="http://www.testportal.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/ucoiao.png" style=" " width="200" /></a>
+<hr class="hr">
+<a href="http://www.dneprtest.dp.ua" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/ducoiao.png" style=" " width="200" /></a>
+<hr class="hr">
+<a href="http://osvita.ua/" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/osvita.jpg" style=" " width="200" /></a>
+<hr class="hr">
+<a href="http://nus.org.ua/" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/nush.jpg" style=" " width="200" /></a>
+<hr class="hr">
+<a href="https://www.pedrada.com.ua/" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/pedrada.jpg" style=" " width="200" /></a>
+
+
+<!--<hr class = "hr">
+	<a href="http://www.educom.ua/uk-ua/" target="_blank"><img class = "scalehover" alt="Банер" height="92" src="/uploads/editor/1558/91827/sitepage_148/images/bx_default_logo.gif" style=" " width="160" /></a>
+	<hr class = "hr">
+	<a href="http://www.dnu.dp.ua/"> <img src="http://www.dnu.dp.ua/images/dnubanner_small.png" alt="ДНУ ім. Олеся Гончара" title="Дніпровський національний університет ім. Олеся Гончара" />-->
+
+<!------------------------sinoptic------------------------>
+<hr class="hr">
+<div id="SinoptikInformer" style="width: 200px; padding-left:11px;" class="SinoptikInformer type1">
+	<div class="siHeader">
+		<div class="siLh">
+			<div class="siMh"><a onmousedown="siClickCount();" href="http://ua.sinoptik.ua/"
+					target="_blank">Погода</a><a onmousedown="siClickCount();" class="siLogo"
+					href="http://ua.sinoptik.ua/" target="_blank"><img alt="Прогноз погоды"
+						src="http://informers.sinoptik.ua/img/t.gif" /></a> <span id="siHeader"></span></div>
+		</div>
+	</div>
+	<div class="siBody">
+		<table>
+			<tbody>
+				<tr>
+					<td class="siCityV" style="width:100%;border:none;">
+						<div class="siCityName"><a onmousedown="siClickCount();"
+								href="http://ua.sinoptik.ua/погода-дніпро" target="_blank">Погода у
+								<span>Дніпрі</span></a></div>
+				</tr>
+				<tr>
+					<td style="width:100%;">
+						<div class="siCityV2">
+							<div id="siCont0" class="siBodyContent">
+								<div class="siLeft">
+									<div class="siTerm"></div>
+									<div class="siT" id="siT0"></div>
+									<div id="weatherIco0"></div>
+								</div>
+								<div class="siInf">
+									<p>вологість: <span id="vl0"></span></p>
+									<p>тиск: <span id="dav0"></span></p>
+									<p>вітер: <span id="wind0"></span></p>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="siLinks"></div>
+	</div>
+	<div class="siFooter">
+		<div class="siLf">
+			<div class="siMf"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" charset="UTF-8"
+	src="http://informers.sinoptik.ua/js3.php?title=4&amp;wind=3&amp;cities=303007131&amp;lang=ua"></script>
+<style>
+	#SinoptikInformer>div.siBody>table>tbody>tr:nth-child(2)>td {
+		border: none;
+	}
+</style>
+<!------------------------revolvermaps------------------------>
+<hr class="hr"">
+	<div style=" text-align:center; margin:0px; padding-left:6px; width:calc(100% - 6px - 6px);">
+<embed src="http://rh.revolvermaps.com/f/g.swf" type="application/x-shockwave-flash"
+	pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" wmode="window" allowScriptAccess="always"
+	allowNetworking="all" width="213" height="218"
+	flashvars="m=0&amp;i=7p4hou8u8la&amp;r=false&amp;v=true&amp;b=ffffff&amp;n=true&amp;s=218&amp;c=baff00">
+</embed>
+<br />
+<img src="http://jh.revolvermaps.com/c/7p4hou8u8la.gif" width="1" height="1" alt="" />
+<a href="http://www.revolvermaps.com/?target=enlarge&amp;i=7p4hou8u8la&amp;color=baff00&amp;m=0">Large Visitor Globe</a>
+</div>
+
+<!------------------------HotLog------------------------>
+<hr class="hr">
+<span id="hotlog_counter"></span>
+<span id="hotlog_dyn"></span>
+<script type="text/javascript">
+	var hot_s = document.createElement('script');
+	hot_s.type = 'text/javascript';
+	hot_s.async = true;
+	hot_s.src = 'http://js.hotlog.ru/dcounter/2222938.js';
+	hot_d = document.getElementById('hotlog_dyn');
+	hot_d.appendChild(hot_s);
+</script>
+<noscript>
+	<a href="http://click.hotlog.ru/?2222938" target="_blank"><img
+			src="http://hit40.hotlog.ru/cgi-bin/hotlog/count?s=2222938&amp;im=307" border="0" alt="HotLog"></a>
+</noscript>
+
+<!------------------------ADD------------------------>
+<hr class="hr">
