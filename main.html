@@ -196,16 +196,8 @@
 				<div class="left_menu_item">
 					<div class="left_menu_item_top"></div>
 					<div class="left_menu_item_arrow">
-						<div class="left_menu_item_link contacts_link">
-							<a href="https://school19_babushk.klasna.com/uk/site/nashi-kontakti.html">НАШІ КОНТАКТИ</a>
-							<div class="social-link-container">
-								<a href="https://www.instagram.com/school19_dp" class="social-link" target="_blank">
-									<img src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main//flag.mp4" alt="instagram">
-								</a>
-								<a href="https://www.facebook.com/school19dnipro" class="social-link" target="_blank">
-									<img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" alt="facebook">
-								</a>
-							</div>
+						<div class="left_menu_item_link">
+							<a href="https://school19_babushk.klasna.com/uk/site/nashi-kontakti.html">Наші контакти</a>
 						</div>
 					</div>
 				</div>
@@ -518,22 +510,57 @@
 					</div>
 				</div>
 
+				
+
 
 
 
 				<include src="import.html"></include>
+				<!--===========================  JS Section ============================-->
+
+				<!-- добавить иконки соцсетей в КОНТАКТИ -->
+				<script>
+					addSocialIcon();
+					function addSocialIcon() {
+						let itemLink = document.querySelector('a[href*="nashi-kontakti"]');
+						let contactsLink = itemLink.parentElement;
+						let html = `
+			<div class="social-link-container">
+				<a href="https://www.instagram.com/school19_dp" class="social-link" target="_blank">
+					<img class="instagram-link-img" src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/image/instagram.svg" alt="instagram">
+				</a>
+				
+			</div>
+		`;
+						// <a href="https://www.facebook.com/school19dnipro" class="social-link" target="_blank">
+						// 			<img class="facebook-link-img" src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/image/facebook.svg" alt="facebook">
+						// 		</a>
+						contactsLink.insertAdjacentHTML('beforeend', html);
+					}
+				</script>
+
+
+				<!--============================== END  JS  ============================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 				<!--LiveInternet counter-->
-				<script type="text/javascript">< !--
-						document.write("<a style='display:none' href='http://www.liveinternet.ru/click;klasnaocinka' " +
-							"target=_blank><img style='display:none' src='//counter.yadro.ru/hit;klasnaocinka?t44.1;r" +
-							escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
-								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
-									screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
-							";" + Math.random() +
-							"' alt='' title='LiveInternet' " +
-							"border='0' width='31' height='31'><\/a>")
-//--></script>
+
 				<!--/LiveInternet-->
 				<center>
 					<div id="widgets_left"></div>
@@ -1007,32 +1034,7 @@
 				</div>
 
 				<br />
-				<center>
 
-					<br>
-					<br>
-					<a href="http://www.mon.gov.ua" title="Міністерство oсвіти і науки, молоді та спорту України" target="_blank"
-						rel="nofollow"><img src="https://school19_babushk.klasna.com/img/banner/MONMS_static.jpg"
-							alt="Міністерство oсвіти і науки, молоді та спорту України" class="mb_10 "
-							https://school19_babushk.klasna.com /></a>
-					<br />
-					<br> <a href="http://i-ranok.com/?utm_source=klaklasnaocinka&amp;utm_medium=baner"><img
-							src="https://school19_babushk.klasna.com/uploads/banners/62105ad5c497fScreenshot_9.jpg" width="200"
-							alt="lorem"></a>
-					<br />
-					<a href="http://pedpresa.ua" title="Педагогічна преса" target="_blank" rel="nofollow"><img
-							src="https://school19_babushk.klasna.com/img/banner/pedrpesacom_banner.gif" alt="Педагогічна преса"
-							class="mb_10 " https://school19_babushk.klasna.com /></a>
-					<a href="http://la-strada.org.ua" target="_blank"> <img width="187px"
-							src="https://school19_babushk.klasna.com/img/banner/lastrada.jpg"
-							alt="Національна дитяча гаряча лінія"></a>
-					<a href="https://newedu.it-kharkov.net/" title="5-й Міжнародний освітній онлайн-форум" target="_blank"
-						rel="nofollow"><img src="https://school19_babushk.klasna.com/img/banner/forum.jpg"
-							alt="5-й Міжнародний освітній онлайн-форум" class="mb_10 "></a>
-
-
-					<br />
-				</center>
 
 				<center>
 					<div id="widgets_right"></div>
@@ -1050,24 +1052,8 @@
 				<br clear="all"><br />
 			</div>
 		</div>
-		<script data-cfasync="false"
-			src="https://school19_babushk.klasna.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-		<script type="text/javascript">
-			/*<![CDATA[*/
-			jQuery(function ($) {
-				ddsmoothmenu.init({
-					mainmenuid: "smoothmenu1", //menu DIV id
-					orientation: "h",
-					classname: "ddsmoothmenu",
-					//customtheme: ["#1c5a80", "#18374a"],
-					contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
-				})
 
-				$("#widgets_right").load("https://school19_babushk.klasna.com/uk/widgets/default/showwidgets/side/right");
 
-			});
-/*]]>*/
-		</script>
 </body>
 
 </html>
