@@ -1,0 +1,306 @@
+<head></head>
+
+<body>
+
+</body>
+<!--
+          Эти секции были созданы т.к. отсутствует доступ к файлам проэкта.
+          Тут можно добавлять пользовательские стили и скрипты
+         -->
+<!--=======================  CSS Section =======================-->
+<style>
+	:root {
+		/*border color*/
+		--b-color: #7AAF04;
+	}
+
+	body {
+		background-image: linear-gradient(90deg, #fee67d, #FFF, #fee67d);
+		background-image: url('https://school19_babushk.klasna.com/uploads/editor/1548/759807/asset_images/body_bg.jpg');
+		background-attachment: fixed;
+		background-position: top;
+		background-size: cover;
+	}
+
+	h1 {
+		color: #617a2e;
+		overflow: hidden;
+	}
+
+	/* фоновое видео страницы (флаг Украины) */
+	#backgroundVideo {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+		z-index: -100;
+	}
+
+	#top_image.uk {
+		background: url('https://school19_babushk.klasna.com/uploads/editor/1548/759807/asset_images/top_image_bg.jpg') no-repeat center center;
+		background-size: 100% 100%;
+		transition-duration: 0.5s;
+		box-shadow: inset 0px 0px 10px 5px rgba(255, 255, 255, 0.75);
+	}
+
+	#top_image.uk:hover {
+		background-size: 110% 110%;
+	}
+
+	#top_image h1.title {
+		top: 240px;
+		left: 10px;
+		background: rgba(255, 255, 255, 0.5);
+		text-shadow: 1px 1px 2px black;
+		text-align: center;
+		line-height: 30px;
+		width: 1180px !important;
+		margin: 0 auto;
+		border-radius: 3px;
+	}
+
+	#top_conteiner {
+		background-color: rgba(255, 255, 255, 0.75);
+	}
+
+	#top_conteiner,
+	#main_content {
+		box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, 0.75);
+	}
+
+	#main_content {
+		border-radius: 5px;
+		padding: 5px;
+		z-index: 1;
+	}
+
+	#main_content>h1 {
+		display: none;
+	}
+
+	#logo {
+		border-radius: 3px;
+		background: url('http://school19_babushk.klasna.com/themes/1/img/langv_podl.png') no-repeat top center;
+		background-size: cover;
+	}
+
+	#logo img {
+		padding: 5px;
+	}
+
+	.top_menu_item,
+	.left_menu_item_link,
+	#login_str {
+		transition-duration: 0.5s;
+	}
+
+	.top_menu_item:hover,
+	.left_menu_item_link:hover {
+		-moz-transform:
+			/* Для Firefox */
+			scale(1.05, 1.05);
+		-ms-transform:
+			/* Для IE */
+			scale(1.05, 1.05);
+		-webkit-transform:
+			/* Для Safari, Chrome, iOS */
+			scale(1.05, 1.05);
+		-o-transform:
+			/* Для Opera */
+			scale(1.05, 1.05);
+		transform:
+			scale(1.05, 1.05);
+	}
+
+	.ddsmoothmenu ul li {
+		background: none;
+	}
+
+	.social-link-container {
+		float: right;
+	}
+
+	.left_menu_item {
+		position: relative;
+	}
+
+	.social-link img {
+		height: 17px;
+	}
+
+	.social-link:hover {
+		width: 300px;
+	}
+
+	#login_str {
+		height: 10px;
+		margin-top: 15px;
+		display: none;
+	}
+
+	/**
+ * Trapezoid tabs
+ */
+
+	.post-content {
+		/* padding: 40px; */
+		font: 130%/2 Frutiger LT Std, sans-serif;
+		margin-bottom: 25px;
+	}
+
+	.module-border-wrap {
+		max-width: 250px;
+		position: relative;
+		z-index: -1;
+	}
+
+	.tab {
+		margin-bottom: 2px;
+		border-bottom: 1px solid var(--b-color);
+	}
+
+	.tab>span {
+		width: 50px;
+		position: relative;
+		display: inline-block;
+		padding: .3em 1em 0;
+		color: inherit;
+		text-decoration: none;
+		color: #fff;
+		font-weight: bold;
+		text-transform: lowercase;
+		text-align: center;
+	}
+
+	.tab>span::before,
+	main {
+		border: .1em solid rgba(0, 0, 0, .4);
+	}
+
+	.tab span::before {
+		content: '';
+		/* To generate the box */
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		border-bottom: none;
+		border-radius: .5em .5em 0 0;
+		background: #ccc linear-gradient(0deg, #6DA600 0%, #98C50E 50%);
+		box-shadow: 0 .15em white inset;
+		transform: scale(1.1, 1.3) perspective(.5em) rotateX(5deg);
+		transform-origin: bottom;
+	}
+
+	div.tab-content {
+		background-color: #fff;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+		background-image: -webkit-linear-gradient(top, #fff, #ddd);
+		background-image: -moz-linear-gradient(top, #fff, #ddd);
+		background-image: -ms-linear-gradient(top, #fff, #ddd);
+		background-image: -o-linear-gradient(top, #fff, #ddd);
+		background-image: linear-gradient(top, #fff, #ddd);
+		-moz-border-radius: 0 2px 2px 2px;
+		-webkit-border-radius: 0 2px 2px 2px;
+		border-radius: 0 2px 2px 2px;
+		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		box-shadow: 0 2px 2px rgb(47, 66, 45), 0 -1px 0 #fff inset;
+		border: 1px solid var(--b-color);
+		padding: 15px;
+	}
+
+	.tab>span::before {
+		transform: scale(1.2, 1.3) perspective(.8em) rotateX(5deg);
+		transform-origin: bottom left;
+	}
+
+	.content-titlte {
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	.content-text {
+		font-size: 15px;
+	}
+
+	.content-titlte,
+	.content-text {
+		color: #595858;
+		margin-bottom: 3.6pt;
+		line-height: normal;
+		text-align: left;
+	}
+</style>
+
+<!--=======================   END  CSS  ========================-->
+
+<!--======================  HTML Section =======================-->
+
+<!-- фоновое видео страницы (флаг Украины) -->
+<video autoplay muted loop id="backgroundVideo">
+	<source src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/video/flag.mp4" type="video/mp4">
+</video>
+
+<!------------------------ссылки на стороннии ресурсы------------------------>
+<hr class="hr">
+<a href="http://www.mon.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/mongovua.png" width="200" /></a>
+<hr class="hr">
+<a href="http://www.adm.dp.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/dadm.png" width="200" /></a>
+<hr class="hr">
+<a href="http://www.testportal.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/ucoiao.png" width="200" /></a>
+<hr class="hr">
+<a href="http://www.dneprtest.dp.ua" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/ducoiao.png" width="200" /></a>
+<hr class="hr">
+<a href="http://osvita.ua/" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/osvita.jpg" width="200" /></a>
+<hr class="hr">
+<a href="http://nus.org.ua/" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/nush.jpg" width="200" /></a>
+<hr class="hr">
+<a href="https://www.pedrada.com.ua/" target="_blank"><img class="scalehover" alt="Банер"
+		src="/uploads/editor/1548/91817/sitepage_207/images/pedrada.jpg" width="200" /></a>
+
+<!--========================= END  HTML  =======================-->
+
+<!--======================  JS Section =======================-->
+
+<script>
+	// добавить иконки соцсетей в "Наші контакти"
+	addSocialIcon();
+	function addSocialIcon() {
+		let itemLink = document.querySelector('.left_menu_item_link a[href*="nashi-kontakti"]');
+		let contactsLink = itemLink.parentElement;
+		let html = `
+			<div class="social-link-container">
+				<a href="https://www.instagram.com/school19_dp" class="social-link" target="_blank">
+					<img class="instagram-link-img" src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/image/instagram.svg" alt="instagram">
+				</a>
+				
+			</div>
+		`;
+		contactsLink.insertAdjacentHTML('beforeend', html);
+	}
+
+	//удалить вместе с постом "Когда закончится война"
+	document.addEventListener("DOMContentLoaded", function () {
+
+		let videoZakinchyVijna = document.getElementById('videozakinchyvijna');
+		console.log(videoZakinchyVijna);
+		let html = `
+		<video width="420" height="315"
+src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/video/koly\`_zakinchy\`t\`sya_vijna.mp4"
+		height = "600px" controls >
+</video >
+		`;
+		videoZakinchyVijna.insertAdjacentHTML('beforeend', html);
+	});
+</script>
+<!--========================= END  JS  =======================-->
