@@ -171,6 +171,7 @@
 		font-weight: bold;
 		text-transform: lowercase;
 		text-align: center;
+		line-height: normal;
 	}
 
 	.tab>span::before,
@@ -197,12 +198,12 @@
 
 	div.tab-content {
 		background-color: #fff;
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
-		background-image: -webkit-linear-gradient(top, #fff, #ddd);
-		background-image: -moz-linear-gradient(top, #fff, #ddd);
-		background-image: -ms-linear-gradient(top, #fff, #ddd);
-		background-image: -o-linear-gradient(top, #fff, #ddd);
-		background-image: linear-gradient(top, #fff, #ddd);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+		background-image: -webkit-linear-gradient(top, #fff, #eee);
+		background-image: -moz-linear-gradient(top, #fff, #eee);
+		background-image: -ms-linear-gradient(top, #fff, #eee);
+		background-image: -o-linear-gradient(top, #fff, #eee);
+		background-image: linear-gradient(top, #fff, #eee);
 		-moz-border-radius: 0 2px 2px 2px;
 		-webkit-border-radius: 0 2px 2px 2px;
 		border-radius: 0 2px 2px 2px;
@@ -218,21 +219,43 @@
 		transform-origin: bottom left;
 	}
 
-	.content-titlte {
+	.content-text,
+	.post-banner {
+		margin-bottom: 1em;
+	}
+
+	.post-heading {
 		font-size: 24px;
 		font-weight: bold;
+		margin-top: 1em;
 	}
 
 	.content-text {
 		font-size: 15px;
 	}
 
-	.content-titlte,
+	.post-heading,
 	.content-text {
 		color: #595858;
-		margin-bottom: 3.6pt;
 		line-height: normal;
 		text-align: left;
+	}
+
+	.post-content ul {
+		margin: 0;
+	}
+
+	.post-content li {
+		margin-bottom: 0.2em;
+		font-size: 14px;
+		line-height: normal;
+		list-style-position: inside;
+		list-style-image: url('https://school19_babushk.klasna.com/uploads/editor/1548/759807/asset_images/marker.png');
+	}
+
+	.date-stamp {
+		padding-top: 50px;
+		text-align: right;
 	}
 </style>
 
@@ -248,59 +271,31 @@
 <!------------------------ссылки на стороннии ресурсы------------------------>
 <hr class="hr">
 <a href="http://www.mon.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
-		src="/uploads/editor/1548/91817/sitepage_207/images/mongovua.png" width="200" /></a>
+		src="http://school19_babushk.klasna.com/uploads/editor/1548/91817/sitepage_207/images/mongovua.png"
+		width="200" /></a>
 <hr class="hr">
 <a href="http://www.adm.dp.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
-		src="/uploads/editor/1548/91817/sitepage_207/images/dadm.png" width="200" /></a>
+		src="http://school19_babushk.klasna.com/uploads/editor/1548/91817/sitepage_207/images/dadm.png" width="200" /></a>
 <hr class="hr">
 <a href="http://www.testportal.gov.ua" target="_blank"><img class="scalehover" alt="Банер"
-		src="/uploads/editor/1548/91817/sitepage_207/images/ucoiao.png" width="200" /></a>
+		src="http://school19_babushk.klasna.com/uploads/editor/1548/91817/sitepage_207/images/ucoiao.png" width="200" /></a>
 <hr class="hr">
 <a href="http://www.dneprtest.dp.ua" target="_blank"><img class="scalehover" alt="Банер"
-		src="/uploads/editor/1548/91817/sitepage_207/images/ducoiao.png" width="200" /></a>
+		src="http://school19_babushk.klasna.com/uploads/editor/1548/91817/sitepage_207/images/ducoiao.png"
+		width="200" /></a>
 <hr class="hr">
 <a href="http://osvita.ua/" target="_blank"><img class="scalehover" alt="Банер"
-		src="/uploads/editor/1548/91817/sitepage_207/images/osvita.jpg" width="200" /></a>
+		src="http://school19_babushk.klasna.com/uploads/editor/1548/91817/sitepage_207/images/osvita.jpg" width="200" /></a>
 <hr class="hr">
 <a href="http://nus.org.ua/" target="_blank"><img class="scalehover" alt="Банер"
-		src="/uploads/editor/1548/91817/sitepage_207/images/nush.jpg" width="200" /></a>
+		src="http://school19_babushk.klasna.com/uploads/editor/1548/91817/sitepage_207/images/nush.jpg" width="200" /></a>
 <hr class="hr">
 <a href="https://www.pedrada.com.ua/" target="_blank"><img class="scalehover" alt="Банер"
-		src="/uploads/editor/1548/91817/sitepage_207/images/pedrada.jpg" width="200" /></a>
+		src="http://school19_babushk.klasna.com/uploads/editor/1548/91817/sitepage_207/images/pedrada.jpg"
+		width="200" /></a>
 
 <!--========================= END  HTML  =======================-->
 
 <!--======================  JS Section =======================-->
 
-<script>
-	// добавить иконки соцсетей в "Наші контакти"
-	addSocialIcon();
-	function addSocialIcon() {
-		let itemLink = document.querySelector('.left_menu_item_link a[href*="nashi-kontakti"]');
-		let contactsLink = itemLink.parentElement;
-		let html = `
-			<div class="social-link-container">
-				<a href="https://www.instagram.com/school19_dp" class="social-link" target="_blank">
-					<img class="instagram-link-img" src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/image/instagram.svg" alt="instagram">
-				</a>
-				
-			</div>
-		`;
-		contactsLink.insertAdjacentHTML('beforeend', html);
-	}
-
-	//удалить вместе с постом "Когда закончится война"
-	document.addEventListener("DOMContentLoaded", function () {
-
-		let videoZakinchyVijna = document.getElementById('videozakinchyvijna');
-		console.log(videoZakinchyVijna);
-		let html = `
-		<video width="420" height="315"
-src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/video/koly\`_zakinchy\`t\`sya_vijna.mp4"
-		height = "600px" controls >
-</video >
-		`;
-		videoZakinchyVijna.insertAdjacentHTML('beforeend', html);
-	});
-</script>
 <!--========================= END  JS  =======================-->
