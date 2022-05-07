@@ -483,7 +483,7 @@
 						<!-- -----------   include    ----------- -->
 						<!-- ------------------------------------ -->
 
-						<include src="pages/storinka-psihologa.html"></include>
+						<include src="pages/bichne-menu/shkilni-zahodi.html"></include>
 
 						<!--======================  JS Section =======================-->
 
@@ -496,7 +496,7 @@
 								let html = `
 									<div class="social-link-container">
 										<a href="https://www.instagram.com/school19_dp" class="social-link" target="_blank">
-											<img class="instagram-link-img" src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/image/instagram.svg" alt="instagram">
+											<img class="instagram-link-img" src="https://raw.githubusercontent.com/Andrey-SD/school19_babushk/main/image/instagram.svg" alt>
 										</a>
 										
 									</div>
@@ -504,16 +504,29 @@
 								contactsLink.insertAdjacentHTML('beforeend', html);
 							}
 
-							//удалить вместе с постом "Когда закончится война"
+							//конструктор обрезает тег Video, этот скрипт создает элемент video
+							//внутри div.videoContainer
+							/*
+								<div style="text-align: center;" class="videoContainer" data-width="640" //ширина video
+								data-height="315" //высота video
+								data-src="">  //ссылка на video
+								</div>
+							*/
+
 							window.onload = function () {
-								let videoContainer = document.getElementById('video');
-								let html = `
-						<video width="420" height="315"
-							src="https://school19_babushk.klasna.com/uploads/editor/1548/759807/1_golovna/koly_zakinchytsya_viyna/koly_zakinchytsya_viyna.mp4"
-							height="600px" controls>
-						</video>
-						`;
-								videoContainer.insertAdjacentHTML('beforeend', html);
+								let videoContainers = document.querySelectorAll('.videoContainer');
+								for (const element of videoContainers) {
+									const width = element.dataset.width;
+									const height = element.dataset.height;
+									const src = element.dataset.src;
+									const html = `
+									<video width="${width}" height="${height}"
+									src="${src}" controls>
+								</video>
+									`;
+									element.insertAdjacentHTML('beforeend', html);
+
+								}
 							};
 						</script>
 						<!--========================= END  JS  =======================-->
